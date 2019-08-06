@@ -1,0 +1,16 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: userDb
+      username: app-root
+      password: root123
+      database: userDb
+      port: 27017
+      host: fse-mongo
+#      uri: mongodb://fse-mongo/userDb
+  application:
+    name: user-service
+server:
+  port: 8080
+jwt:
+  key: keepnote

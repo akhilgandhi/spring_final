@@ -1,0 +1,173 @@
+2019-08-06 05:59:16 [main] INFO  c.s.keepnote.NoteServiceApplication -
+				Starting NoteServiceApplication on ip-172-31-91-238 with PID 10480 (/home/ubuntu/final_fse/KeepNote-Step7-Boilerplate/NoteService/target/classes started by ubuntu in /home/ubuntu/final_fse/KeepNote-Step7-Boilerplate/NoteService)
+2019-08-06 05:59:17 [main] INFO  c.s.keepnote.NoteServiceApplication -
+				No active profile set, falling back to default profiles: default
+2019-08-06 05:59:17 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -
+				Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b7a5baa: startup date [Tue Aug 06 05:59:17 UTC 2019]; root of context hierarchy
+2019-08-06 05:59:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8082 (http)
+2019-08-06 05:59:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8082"]
+2019-08-06 05:59:18 [main] INFO  o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2019-08-06 05:59:18 [main] INFO  o.a.catalina.core.StandardEngine -
+				Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener -
+				The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -
+				Root WebApplicationContext: initialization completed in 1225 ms
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'requestContextFilter' to: [/*]
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean -
+				Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'jwtFilter' to urls: [/*]
+2019-08-06 05:59:18 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -
+				Servlet dispatcherServlet mapped to [/]
+2019-08-06 05:59:18 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-08-06 05:59:18 [main] INFO  org.mongodb.driver.cluster -
+				Adding discovered server localhost:27017 to client view of cluster
+2019-08-06 05:59:18 [cluster-ClusterId{value='5d49173615413828f03098db', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:1, serverValue:6}] to localhost:27017
+2019-08-06 05:59:18 [cluster-ClusterId{value='5d49173615413828f03098db', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 2]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2224330}
+2019-08-06 05:59:18 [cluster-ClusterId{value='5d49173615413828f03098db', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+				Discovered cluster type of STANDALONE
+2019-08-06 05:59:19 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration -
+				
+
+Using generated security password: 1bb114be-c914-4aec-812d-71fe4fa0697c
+
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -
+				Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/note/{userId}],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public java.util.List<com.stackroute.keepnote.model.Note> com.stackroute.keepnote.controller.NoteController.getAllNotesByUserId(java.lang.String) throws com.stackroute.keepnote.exception.NoteNotFoundExeption
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/note/{userId}/{noteId}],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public com.stackroute.keepnote.model.Note com.stackroute.keepnote.controller.NoteController.getNote(java.lang.String,int) throws com.stackroute.keepnote.exception.NoteNotFoundExeption
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/note/update/{userId}/{noteId}],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public com.stackroute.keepnote.model.Note com.stackroute.keepnote.controller.NoteController.updateNote(com.stackroute.keepnote.model.Note,java.lang.String,int) throws com.stackroute.keepnote.exception.NoteNotFoundExeption
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/note/delete/{userId}/{noteId}],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.stackroute.keepnote.controller.NoteController.deleteNote(java.lang.String,int) throws com.stackroute.keepnote.exception.NoteNotFoundExeption
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/note],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public com.stackroute.keepnote.model.Note com.stackroute.keepnote.controller.NoteController.createNote(com.stackroute.keepnote.model.Note) throws com.stackroute.keepnote.exception.NoteAlreadyExistsException
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -
+				Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -
+				Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-06 05:59:19 [main] INFO  o.s.s.web.DefaultSecurityFilterChain -
+				Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c69362a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b3fe06e, org.springframework.security.web.header.HeaderWriterFilter@2c8662ac, org.springframework.web.filter.CorsFilter@2412a42b, org.springframework.security.web.authentication.logout.LogoutFilter@1290c49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3e17a0a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a7cc52c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45404d5, org.springframework.security.web.session.SessionManagementFilter@7487b142, org.springframework.security.web.access.ExceptionTranslationFilter@71ad3d8a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@772861aa]
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -
+				Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b7a5baa: startup date [Tue Aug 06 05:59:17 UTC 2019]; root of context hierarchy
+2019-08-06 05:59:19 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -
+				Detected @ExceptionHandler methods in exceptionHandlerAdvice
+2019-08-06 05:59:19 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -
+				Registering beans for JMX exposure on startup
+2019-08-06 05:59:19 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8082"]
+2019-08-06 05:59:19 [main] INFO  o.a.tomcat.util.net.NioSelectorPool -
+				Using a shared selector for servlet write/read
+2019-08-06 05:59:19 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8082 (http) with context path ''
+2019-08-06 05:59:19 [main] INFO  c.s.keepnote.NoteServiceApplication -
+				Started NoteServiceApplication in 3.179 seconds (JVM running for 3.724)
+2019-08-06 06:02:18 [http-nio-8082-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-06 06:02:18 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-06 06:02:18 [http-nio-8082-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization completed in 20 ms
+2019-08-06 06:02:19 [http-nio-8082-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:02:19 [http-nio-8082-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:02:19 [http-nio-8082-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:02:19 [http-nio-8082-exec-3] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:2, serverValue:9}] to localhost:27017
+2019-08-06 06:19:52 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:19:52 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:19:52 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:20:41 [http-nio-8082-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:20:41 [http-nio-8082-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:20:41 [http-nio-8082-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:28:06 [http-nio-8082-exec-10] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:28:06 [http-nio-8082-exec-10] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:28:06 [http-nio-8082-exec-10] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:28:18 [http-nio-8082-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:28:18 [http-nio-8082-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:28:18 [http-nio-8082-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:29:25 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:29:25 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:29:25 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:29:53 [http-nio-8082-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:29:53 [http-nio-8082-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note
+2019-08-06 06:29:53 [http-nio-8082-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:29:53 [http-nio-8082-exec-7] INFO  c.s.k.controller.NoteController -
+				calling service layer to store
+2019-08-06 06:29:53 [http-nio-8082-exec-7] INFO  c.s.keepnote.service.NoteServiceImpl -
+				create new note service
+2019-08-06 06:30:01 [http-nio-8082-exec-9] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:30:01 [http-nio-8082-exec-9] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:30:01 [http-nio-8082-exec-9] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:30:11 [http-nio-8082-exec-1] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:30:11 [http-nio-8082-exec-1] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1/1
+2019-08-06 06:30:11 [http-nio-8082-exec-1] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:30:31 [http-nio-8082-exec-2] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:30:31 [http-nio-8082-exec-2] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/update/test1/1
+2019-08-06 06:30:31 [http-nio-8082-exec-2] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 06:30:31 [http-nio-8082-exec-2] INFO  c.s.k.controller.NoteController -
+				calling service layer to update
+2019-08-06 06:30:33 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				token -- test1
+2019-08-06 06:30:33 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/note/test1
+2019-08-06 06:30:33 [http-nio-8082-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				req hdr -- test1
+2019-08-06 07:47:04 [Thread-3] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -
+				Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@5b7a5baa: startup date [Tue Aug 06 05:59:17 UTC 2019]; root of context hierarchy
+2019-08-06 07:47:04 [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter -
+				Unregistering JMX-exposed beans on shutdown
+2019-08-06 07:47:04 [Thread-3] WARN  org.mongodb.driver.connection -
+				Got socket exception on connection [connectionId{localValue:2, serverValue:9}] to localhost:27017. All connections to localhost:27017 will be closed.
+2019-08-06 07:47:04 [Thread-3] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:2, serverValue:9}] to localhost:27017 because there was a socket exception raised by this connection.

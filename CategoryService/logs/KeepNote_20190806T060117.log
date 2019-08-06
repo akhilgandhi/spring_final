@@ -1,0 +1,156 @@
+2019-08-06 06:01:17 [main] INFO  c.s.k.CategoryServiceApplication -
+				Starting CategoryServiceApplication on ip-172-31-91-238 with PID 10620 (/home/ubuntu/final_fse/KeepNote-Step7-Boilerplate/CategoryService/target/classes started by ubuntu in /home/ubuntu/final_fse/KeepNote-Step7-Boilerplate/CategoryService)
+2019-08-06 06:01:17 [main] INFO  c.s.k.CategoryServiceApplication -
+				No active profile set, falling back to default profiles: default
+2019-08-06 06:01:17 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -
+				Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74235045: startup date [Tue Aug 06 06:01:17 UTC 2019]; root of context hierarchy
+2019-08-06 06:01:18 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat initialized with port(s): 8083 (http)
+2019-08-06 06:01:18 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Initializing ProtocolHandler ["http-nio-8083"]
+2019-08-06 06:01:18 [main] INFO  o.a.catalina.core.StandardService -
+				Starting service [Tomcat]
+2019-08-06 06:01:18 [main] INFO  o.a.catalina.core.StandardEngine -
+				Starting Servlet Engine: Apache Tomcat/8.5.31
+2019-08-06 06:01:18 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener -
+				The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring embedded WebApplicationContext
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -
+				Root WebApplicationContext: initialization completed in 1179 ms
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'requestContextFilter' to: [/*]
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.b.w.s.DelegatingFilterProxyRegistrationBean -
+				Mapping filter: 'springSecurityFilterChain' to: [/*]
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -
+				Mapping filter: 'jwtFilter' to urls: [/*]
+2019-08-06 06:01:19 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -
+				Servlet dispatcherServlet mapped to [/]
+2019-08-06 06:01:19 [main] INFO  org.mongodb.driver.cluster -
+				Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+2019-08-06 06:01:19 [main] INFO  org.mongodb.driver.cluster -
+				Adding discovered server localhost:27017 to client view of cluster
+2019-08-06 06:01:19 [cluster-ClusterId{value='5d4917af154138297c3d4ef1', description='null'}-localhost:27017] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:1, serverValue:7}] to localhost:27017
+2019-08-06 06:01:19 [cluster-ClusterId{value='5d4917af154138297c3d4ef1', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+				Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 6, 2]}, minWireVersion=0, maxWireVersion=6, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=2016605}
+2019-08-06 06:01:19 [cluster-ClusterId{value='5d4917af154138297c3d4ef1', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+				Discovered cluster type of STANDALONE
+2019-08-06 06:01:19 [main] INFO  o.s.b.a.s.s.UserDetailsServiceAutoConfiguration -
+				
+
+Using generated security password: 30104bdc-1e24-4c12-86be-0cef70c51140
+
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -
+				Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/category/update/{categoryId}],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public com.stackroute.keepnote.model.Category com.stackroute.keepnote.controller.CategoryController.updateCategory(com.stackroute.keepnote.model.Category,java.lang.String) throws com.stackroute.keepnote.exception.CategoryNotFoundException
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/category/{userId}/{categoryId}],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public com.stackroute.keepnote.model.Category com.stackroute.keepnote.controller.CategoryController.getCategoryById(java.lang.String,java.lang.String) throws com.stackroute.keepnote.exception.CategoryNotFoundException
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/category/{userId}],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public java.util.List<com.stackroute.keepnote.model.Category> com.stackroute.keepnote.controller.CategoryController.getAllCategoriesByUserId(java.lang.String) throws com.stackroute.keepnote.exception.CategoryDoesNoteExistsException
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/category/delete/{categoryId}],methods=[GET],consumes=[application/json],produces=[application/json]}" onto public java.lang.String com.stackroute.keepnote.controller.CategoryController.deleteCategory(java.lang.String) throws com.stackroute.keepnote.exception.CategoryDoesNoteExistsException
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/api/v1/category],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public com.stackroute.keepnote.model.Category com.stackroute.keepnote.controller.CategoryController.createCategory(com.stackroute.keepnote.model.Category) throws com.stackroute.keepnote.exception.CategoryNotCreatedException
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -
+				Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -
+				Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -
+				Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-08-06 06:01:20 [main] INFO  o.s.s.web.DefaultSecurityFilterChain -
+				Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d04529c, org.springframework.security.web.context.SecurityContextPersistenceFilter@f679798, org.springframework.security.web.header.HeaderWriterFilter@7158daf2, org.springframework.web.filter.CorsFilter@14fa92af, org.springframework.security.web.authentication.logout.LogoutFilter@41b1f51e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59d77850, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@18acfe88, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b16e202, org.springframework.security.web.session.SessionManagementFilter@3ce53f6a, org.springframework.security.web.access.ExceptionTranslationFilter@2b22a1cc, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@49206065]
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -
+				Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74235045: startup date [Tue Aug 06 06:01:17 UTC 2019]; root of context hierarchy
+2019-08-06 06:01:20 [main] INFO  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver -
+				Detected @ExceptionHandler methods in exceptionHandlerAdvice
+2019-08-06 06:01:20 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter -
+				Registering beans for JMX exposure on startup
+2019-08-06 06:01:20 [main] INFO  o.a.coyote.http11.Http11NioProtocol -
+				Starting ProtocolHandler ["http-nio-8083"]
+2019-08-06 06:01:20 [main] INFO  o.a.tomcat.util.net.NioSelectorPool -
+				Using a shared selector for servlet write/read
+2019-08-06 06:01:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer -
+				Tomcat started on port(s): 8083 (http) with context path ''
+2019-08-06 06:01:20 [main] INFO  c.s.k.CategoryServiceApplication -
+				Started CategoryServiceApplication in 3.317 seconds (JVM running for 3.872)
+2019-08-06 06:02:25 [http-nio-8083-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -
+				Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-08-06 06:02:25 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization started
+2019-08-06 06:02:25 [http-nio-8083-exec-1] INFO  o.s.web.servlet.DispatcherServlet -
+				FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+2019-08-06 06:02:25 [http-nio-8083-exec-1] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:02:25 [http-nio-8083-exec-1] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 06:02:25 [http-nio-8083-exec-1] INFO  org.mongodb.driver.connection -
+				Opened connection [connectionId{localValue:2, serverValue:10}] to localhost:27017
+2019-08-06 06:28:11 [http-nio-8083-exec-4] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:28:11 [http-nio-8083-exec-4] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 06:28:20 [http-nio-8083-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:28:20 [http-nio-8083-exec-6] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 06:29:11 [http-nio-8083-exec-8] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:29:11 [http-nio-8083-exec-8] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 06:29:21 [http-nio-8083-exec-10] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:29:21 [http-nio-8083-exec-10] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category
+2019-08-06 06:29:21 [http-nio-8083-exec-10] INFO  c.s.k.controller.CategoryController -
+				calling service layer to store
+2019-08-06 06:29:23 [http-nio-8083-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:29:23 [http-nio-8083-exec-3] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 06:29:26 [http-nio-8083-exec-2] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:29:26 [http-nio-8083-exec-2] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 06:30:11 [http-nio-8083-exec-5] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:30:11 [http-nio-8083-exec-5] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 06:30:39 [http-nio-8083-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				test1
+2019-08-06 06:30:39 [http-nio-8083-exec-7] INFO  c.s.keepnote.jwtfilter.JwtFilter -
+				/api/v1/category/test1
+2019-08-06 07:47:04 [Thread-3] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext -
+				Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@74235045: startup date [Tue Aug 06 06:01:17 UTC 2019]; root of context hierarchy
+2019-08-06 07:47:04 [Thread-3] INFO  o.s.j.e.a.AnnotationMBeanExporter -
+				Unregistering JMX-exposed beans on shutdown
+2019-08-06 07:47:04 [Thread-3] WARN  org.mongodb.driver.connection -
+				Got socket exception on connection [connectionId{localValue:2, serverValue:10}] to localhost:27017. All connections to localhost:27017 will be closed.
+2019-08-06 07:47:04 [cluster-ClusterId{value='5d4917af154138297c3d4ef1', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster -
+				Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:62)
+	at com.mongodb.connection.InternalStreamConnection.open(InternalStreamConnection.java:126)
+	at com.mongodb.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:128)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mongodb.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:59)
+	at com.mongodb.connection.SocketStream.open(SocketStream.java:57)
+	... 3 common frames omitted
+2019-08-06 07:47:04 [Thread-3] INFO  org.mongodb.driver.connection -
+				Closed connection [connectionId{localValue:2, serverValue:10}] to localhost:27017 because there was a socket exception raised by this connection.

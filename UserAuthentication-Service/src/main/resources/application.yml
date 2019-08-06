@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:mysql://fse-mysql:6603/keepnote?useSSL=false
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    useSSL: false
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+server:
+  port: 8089
+jwt:
+  key: keepnote
