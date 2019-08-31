@@ -2,7 +2,12 @@ package com.stackroute.keepnote.exception;
 
 public class UserNullException extends Exception {
 
-    public UserNullException(String message) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5681360316553473191L;
+
+	public UserNullException(String message) {
         super(message);
     }
 }

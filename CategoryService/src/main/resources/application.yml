@@ -6,11 +6,11 @@ spring:
       password: root123
       database: userDb
       port: 27017
-      host: fse-mongo
+      host: fsemongo
 #      uri: mongodb://fse-mongo/userDb
   application:
     name: category-service
 server:
-  port: 8083
+  port: 8085
 jwt:
   key: keepnote

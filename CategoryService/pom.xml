@@ -8,11 +8,11 @@
 	<packaging>jar</packaging>
 
 	<name>CategoryService</name>
-	<description> project for Spring Boot  Category service</description>
+	<description>Project for Keep note app - Category service</description>
 
 	<parent>
 		<groupId>com.stackroute.keepnote</groupId>
-		<artifactId>KeepNote-Step-6-Boilerplate</artifactId>
+		<artifactId>KeepNote-App</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 
 

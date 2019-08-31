@@ -4,17 +4,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.stackroute.keepnote</groupId>
 	<artifactId>UserService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>UserService</name>
-	<description>project for Spring Boot User service</description>
+	<description>Project for Keep note app - User service</description>
 
 	<parent>
 		<groupId>com.stackroute.keepnote</groupId>
-		<artifactId>KeepNote-Step-6-Boilerplate</artifactId>
+		<artifactId>KeepNote-App</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 
 	</parent>
@@ -31,8 +29,7 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-core</artifactId>
-			<version>2.15.0</version>
-		</dependency>
+			</dependency>
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>

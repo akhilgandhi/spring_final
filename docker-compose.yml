@@ -1,76 +1,94 @@
 # Dockerfile has been added in all micro-services, you need to dockerize all micro-services and add docker-compose.yml file
-version: '3'
+version: "3.7"
 services:
+
+  fsemongo:
+    image: mongo
+    container_name: fsemongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: app-root
+      MONGO_INITDB_ROOT_PASSWORD: root123
+      MONGO_INITDB_DATABASE: userDb
+    ports:
+      - "27017:27017"
+    networks:
+      - keepnote
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      
+  fsemysql:
+    image: mysql:latest
+    container_name: fsemysql
+    environment:
+      MYSQL_DATABASE: keepnote
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: app-user
+      MYSQL_PASSWORD: app123
+    ports:  
+      - "6603:3306"
+    networks:
+      - keepnote
+
   user_auth_web:
     build: ./UserAuthentication-Service/
     ports: 
-      - '8089:8089'
+      - "8089:8089"
     image: userauthservice:latest
     container_name: userauthserver
     restart: always
-    links:
-      - fse-mongo
-      - fse-mysql
-    
+    depends_on:
+      - fsemongo
+      - fsemysql
+    networks:
+      - keepnote
+ 
   user_web:
     build: ./UserService/
     ports:
-      - '8080:8080'
+      - "8080:8080"
     image: userservice:latest
     container_name: userserver
     restart: always
-    links:
-      - fse-mongo
-  
+    depends_on:
+      - fsemongo
+    networks:
+      - keepnote
+      
   category_web:
     build: ./CategoryService/
     ports:  
-      - '8083:8083'
+      - "8085:8085"
     image: categoryservice:latest
     container_name: categoryserver
     restart: always
-    links:
-      - fse-mongo
+    depends_on:
+      - fsemongo
+    networks:
+      - keepnote
      
   note_web:
     build: ./NoteService/
     ports:  
-      - '8082:8082'
+      - "8082:8082"
     image: noteservice:latest
     container_name: noteserver
     restart: always
-    links:  
-      - fse-mongo
+    depends_on:  
+      - fsemongo
+    networks:
+      - keepnote
       
   reminder_web:
     build: ./ReminderService/
     ports:
-      - '8081:8081'
+      - "8081:8081"
     image: reminderservice:latest
     container_name: reminderserver
     restart: always
-    links:
-      - fse-mongo
+    depends_on:
+      - fsemongo  
+    networks:
+      - keepnote
       
-  fse-mongo:
-    image: mongo:latest
-    container_name: mongo_fsedb
-    ports:
-      - '27017:27017'
-      
-  fse-mysql:
-    image: mysql
-    container_name: mysql_fsedb
-    environment:
-      MYSQL_DATABASE: 'keepnote'
-      MYSQL_ROOT_PASSWORD: root
-    ports:  
-      - '6603:3306'
-    expose:
-      - '6603'
-    volumes:
-      - db_data:/var/lib/mysql/data/
-      
-volumes:
-  db_data: 
-    
+networks:
+  keepnote:

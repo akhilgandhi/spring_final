@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.stackroute.keepnote</groupId>
-    <artifactId>KeepNote-Step-6-Boilerplate</artifactId>
+    <artifactId>KeepNote-App</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>KeepNote-Step-6-Boilerplate</name>
-    <description>project for Spring Boot Keep Note Step-5</description>
+    <name>KeepNote-App</name>
+    <description>Project for Keep note app</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -6,7 +6,7 @@ spring:
       password: root123
       database: userDb
       port: 27017
-      host: fse-mongo
+      host: fsemongo
 #      uri: mongodb://fse-mongo/userDb
   application:
     name: reminder-service
