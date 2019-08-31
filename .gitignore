@@ -1,1 +1,5 @@
 /.metadata/
+logs/*.log
+
+
+.vscode/launch.json
